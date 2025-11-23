@@ -25,21 +25,43 @@ This system has evolved from a stateless prototype to a robust, persistent appli
 
 ## 🛠️ Setup & Installation
 
-Prerequisites
+### 1. Prerequisites
 
 * Python 3.10+
 * A Google Cloud Project with Firestore enabled.
 * A Google Gemini API Key.
+  
+### 2. Clone repository
 
-Clone the Repository
+```bash
+# Clone the Repository
 git clone [https://github.com/shaunjose/socra-design.git](https://github.com/shaunjose/socra-design.git)
+
 cd socra-design
+```
 
-Install Dependencies
+### 3. Install Dependencies
 
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
+
+### 4. Configuration
+
+```bash
+GEMINI_API_KEY="your_google_api_key_here"
+USE_LOCAL_EVAL=1
+SLM_CONF_THRESHOLD=0.7
+```
+### 5.Firestore Setup
+
+* Go to the Firebase Console.
+* Create a project and enable Firestore Database.
+* Generate a Service Account Private Key (JSON).
+* For Local Run: Save the JSON file as service_account.json in your root folder.
+* For Cloud/Spaces: Copy the contents of the JSON file into a secret named FIREBASE_SERVICE_ACCOUNT_JSON.
 
 
 ## 🏗️ System Architecture
