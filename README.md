@@ -23,6 +23,25 @@ This system has evolved from a stateless prototype to a robust, persistent appli
 
 ---
 
+## 🛠️ Setup & Installation
+
+Prerequisites
+
+* Python 3.10+
+* A Google Cloud Project with Firestore enabled.
+* A Google Gemini API Key.
+
+Clone the Repository
+git clone [https://github.com/shaunjose/socra-design.git](https://github.com/shaunjose/socra-design.git)
+cd socra-design
+
+Install Dependencies
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+
 ## 🏗️ System Architecture
 
 The application follows a client-server architecture using **Streamlit** (Frontend) and **LangGraph** (Backend).
