@@ -1,0 +1,18 @@
+{
+  "data_path": "C:\\Users\\shaun\\Desktop\\GNN recommendation system\\data\\eval_training_data_hybrid.csv",
+  "n_samples": 1319,
+  "labels_evaluation": [
+    "CONFUSED",
+    "GOOD",
+    "WEAK"
+  ],
+  "labels_tone": [
+    "analytical",
+    "curious",
+    "frustrated",
+    "neutral",
+    "playful"
+  ],
+  "eval_model_path": "C:\\Users\\shaun\\Desktop\\GNN recommendation system\\models\\slm_eval\\slm_evaluation.joblib",
+  "tone_model_path": "C:\\Users\\shaun\\Desktop\\GNN recommendation system\\models\\slm_eval\\slm_tone.joblib"
+}
