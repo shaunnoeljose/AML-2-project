@@ -18,7 +18,9 @@ This system has evolved from a stateless prototype to a robust, persistent appli
 
 * **🧠 Hybrid Evaluation Engine:** Reduces API latency by ~50% using a local Small Language Model (SLM) to classify response quality ("Good", "Weak", "Confused"), falling back to Gemini only when confidence is low.
 * **💾 Session Persistence:** Integrated with **Google Firestore** to save conversation history and user personas, allowing users to pause and resume sessions anytime.
+
 * **📱 Mobile-First Experience:** A completely redesigned, responsive UI with touch-friendly navigation, gamified progress tracking ("Phase Pills"), and auto-scrolling.
+
 * **📊 Live Analytics:** Tracks user engagement metrics (latency, response depth, confusion rate) in real-time for facilitators.
 
 ---
@@ -116,11 +118,11 @@ The introduction of the Hybrid Evaluation node and Persistence layer significant
 
 ## Known Issues & Limitations
 
-### 1. Cold Start: The first question in a new session may take 2-3 seconds longer as the LangGraph compiles and connects to Firestore.
+1. Cold Start: The first question in a new session may take 2-3 seconds longer as the LangGraph compiles and connects to Firestore.
 
-### 2. Firestore Limits: The current implementation uses the free tier of Firebase. Extremely high traffic (>50k writes/day) may hit quota limits.
+2. Firestore Limits: The current implementation uses the free tier of Firebase. Extremely high traffic (>50k writes/day) may hit quota limits.=
 
-### 3. LLM Hallucinations: While the Socratic prompts are strict, the underlying LLM (Gemini) may occasionally suggest a solution instead of asking a question. The "Self-Correction" loop catches 90% of these cases.
+3. LLM Hallucinations: While the Socratic prompts are strict, the underlying LLM (Gemini) may occasionally suggest a solution instead of asking a question. The "Self-Correction" loop catches 90% of these cases.
 
 ## Responsible AI & Privacy
 
@@ -132,8 +134,9 @@ The introduction of the Hybrid Evaluation node and Persistence layer significant
 
 ## Contact
 
-Shaun Noel Jose
-Masters in Applied Data Science
+Shaun Noel Jose (Masters in Applied Data Science)
+
+Student at University of Florida
 
 Built with 🧡 at the University of Florida.
 
