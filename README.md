@@ -30,10 +30,10 @@ This system has evolved from a stateless prototype to a robust, persistent appli
 ```text
 socra-design/
 ├── 📁src/
-│   ├──📄 socradesign_logic.py      # Core LangGraph state machine & Socratic logic
+│   └──📄 socradesign_logic.py      # Core LangGraph state machine & Socratic logic
+│
+├── 📁 ui/
 │   └──📄 local_streamlit.py        # Main Streamlit application to run locally (Frontend & UI logic)
-├── 📄 requirements.txt             # Python dependencies
-├── 📄 .env                         # Environment variables (API keys, config)
 │
 ├── 📁 slm model/                   # Local ML models (SLM)
 │    └── 📁 scripts/  
@@ -44,9 +44,20 @@ socra-design/
 │    │   ├── slm_evaluation.joblib  # Trained Quality Classifier
 │    │   └── slm_tone.joblib        # Trained Tone Classifier
 │    └── 📁 data/                   # Datasets for training the SLM
-│        ├──  seed.csv              # Initial synthetic data from Gemini
-│        └──train.csv               # Augmented hybrid training set
+│        ├── seed.csv               # Initial synthetic data from Gemini
+│        └── train.csv              # Augmented hybrid training set
 │
+├── 📁 docs/                        # Archeitcture and Interface Diagrams 
+│    ├── Socra UI.png               # Interface
+│    └── System Archeitecture.png   # Archeitecture
+│
+├── 📁 results/                    # Archeitcture and Interface Diagrams 
+│    └── 📁 deep eval logs/        # Folder with deep eval logs
+│    │   ├── eval logs.log         # deep eval log            
+│    └── slm_training_reports.txt  # slm training report
+│
+├── 📄 requirements.txt            # Python dependencies
+├── 📄 .env                        # Environment variables (API keys, config)
 └── 📄 README.md                   # Project documentation
 ```
 ---
