@@ -25,29 +25,30 @@ This system has evolved from a stateless prototype to a robust, persistent appli
 
 ---
 
-## Dataset Structure
+## 📂 Project Structure
 
-Your dataset should be organized as follows:
-
+```text
+socra-design/
+├── 📁src/
+│   ├──📄 socradesign_logic.py      # Core LangGraph state machine & Socratic logic
+│   └──📄 local_streamlit.py        # Main Streamlit application to run locally (Frontend & UI logic)
+├── 📄 requirements.txt             # Python dependencies
+├── 📄 .env                         # Environment variables (API keys, config)
+│
+├── 📁 slm model/                   # Local ML models (SLM)
+│    └── 📁 scripts/  
+│    │   ├── hybrid_dataset.py      # Data synthesis pipeline (Gemini + Augmentation)
+│    │   ├── slm_train.py           # Scikit-learn training script
+│    │   └── slm_probe.py           # CLI tool to test models manually                
+│    └── 📁 slm_eval/
+│    │   ├── slm_evaluation.joblib  # Trained Quality Classifier
+│    │   └── slm_tone.joblib        # Trained Tone Classifier
+│    └── 📁 data/                   # Datasets for training the SLM
+│        ├──  seed.csv              # Initial synthetic data from Gemini
+│        └──train.csv               # Augmented hybrid training set
+│
+└── 📄 README.md                   # Project documentation
 ```
-data/
-├── train/
-│   ├── images/
-│   │   ├── Aging_H&E_001.tif
-│   │   ├── Telemetry_SafO_002.tif
-│   │   └── ...
-│   └── masks/
-│       ├── Aging_H&E_001_bone.tif  (values 0-5)
-│       ├── Telemetry_SafO_002_bone.tif
-│       └── ...
-├── val/
-│   ├── images/
-│   └── masks/
-└── test/
-    ├── images/
-    └── masks/
-```
-
 ---
 
 ## 🛠️ Setup & Installation
