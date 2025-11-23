@@ -12,7 +12,7 @@ Unlike standard chatbots, SocraDesign does not give answers. It asks the right q
 
 ---
 
-## 🚀 Key Features (v3.0 Extended)
+## 🚀 Key Features (v2.0 Extended)
 
 This system has evolved from a stateless prototype to a robust, persistent application.
 
@@ -83,3 +83,57 @@ graph TD
     Probe --> Firestore
     Next --> Firestore
     Firestore --> UI
+```
+
+## Usage
+
+Option A: Run the Application
+
+```bash
+# Launch the Streamlit interface
+streamlit run app.py
+```
+
+Option B: Re-train the SLM (Optional)
+If you want to retrain the local evaluation model on new data:
+
+```bash
+# 1. Generate synthetic training data
+python hybrid_dataset.py --api-key "YOUR_KEY" --seed-out data/seed.csv --final-out data/train.csv
+
+# 2. Train the scikit-learn pipeline
+python slm_train.py --data-path data/train.csv --out-dir models/slm_eval
+```
+
+## Performance Results
+The introduction of the Hybrid Evaluation node and Persistence layer significantly improved robustness.
+
+| Metric | V1(baseline) | V2 | Improvement |
+|-------|-------|-------------|----------------------|
+| Avg. Turn Latency | ~3.5 sec | ~1.8 sec | 48% Faster |
+| Session Continuity | 0% (Stateless) | 100% (Firestore) | Persistent |
+| Mobile Support | Broken | Native-like | Full Support |
+
+## Known Issues & Limitations
+
+### 1. Cold Start: The first question in a new session may take 2-3 seconds longer as the LangGraph compiles and connects to Firestore.
+
+### 2. Firestore Limits: The current implementation uses the free tier of Firebase. Extremely high traffic (>50k writes/day) may hit quota limits.
+
+### 3. LLM Hallucinations: While the Socratic prompts are strict, the underlying LLM (Gemini) may occasionally suggest a solution instead of asking a question. The "Self-Correction" loop catches 90% of these cases.
+
+## Responsible AI & Privacy
+
+* Data Handling: User inputs are stored in Google Firestore and processed by Google Gemini. This is explicitly stated in the app's sidebar.
+
+* Bias Mitigation: The "Develop" phase prompt has been engineered to encourage diverse, non-technical solutions to prevent tech-solutionism bias.
+
+* User Agency: The final report is generated based only on user inputs. The AI acts as a facilitator, not an author.
+
+## Contact
+
+Shaun Noel Jose
+Masters in Applied Data Science
+
+Built with 🧡 at the University of Florida.
+
