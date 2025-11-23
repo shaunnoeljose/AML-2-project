@@ -1,10 +1,44 @@
-SocraGraph — A GNN + NLP Ideation Assistant
+# 🐊 SocraDesign: AI-Powered Socratic Ideation Agent
 
-**SocraGraph** is an intelligent ideation assistant that combines  
-**Graph Neural Networks (GNNs)**, **Design Thinking**, and **Socratic Questioning**  
-to nudge users toward deeper creative reasoning during the idea generation phase.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-FF4B4B.svg)](https://streamlit.io)
+[![LangGraph](https://img.shields.io/badge/LangGraph-Stateful-green.svg)](https://langchain-ai.github.io/langgraph/)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-orange)](https://huggingface.co/spaces)
 
-Instead of just *suggesting ideas*, SocraGraph *facilitates thinking* —  
-it asks structured, Socratic-style questions, draws connections between concepts using a knowledge graph,  
-and guides users through the iterative stages of **Design Thinking**.
+**SocraDesign** is an intelligent conversational agent designed to scaffold the creative ideation process. By strictly adhering to the **Double Diamond** design framework (Discover, Define, Develop, Deliver), it uses Socratic questioning to guide users from vague concepts to actionable, prototypable solutions.
 
+Unlike standard chatbots, SocraDesign does not give answers. It asks the right questions to help *you* find them.
+
+---
+
+## 🚀 Key Features (v3.0 Extended)
+
+This system has evolved from a stateless prototype to a robust, persistent application.
+
+* **🧠 Hybrid Evaluation Engine:** Reduces API latency by ~50% using a local Small Language Model (SLM) to classify response quality ("Good", "Weak", "Confused"), falling back to Gemini only when confidence is low.
+* **💾 Session Persistence:** Integrated with **Google Firestore** to save conversation history and user personas, allowing users to pause and resume sessions anytime.
+* **📱 Mobile-First Experience:** A completely redesigned, responsive UI with touch-friendly navigation, gamified progress tracking ("Phase Pills"), and auto-scrolling.
+* **📊 Live Analytics:** Tracks user engagement metrics (latency, response depth, confusion rate) in real-time for facilitators.
+
+---
+
+## 🏗️ System Architecture
+
+The application follows a client-server architecture using **Streamlit** (Frontend) and **LangGraph** (Backend).
+
+```mermaid
+graph TD
+    User[User Input] --> UI[Streamlit Interface]
+    UI --> SLM{Local SLM}
+    SLM -- "High Conf" --> Router
+    SLM -- "Low Conf" --> API[Gemini API]
+    API --> Router
+    Router --> Logic{Decision Logic}
+    Logic -- "Weak" --> Probe[Generate Probing Q]
+    Logic -- "Good" --> Next[Generate Phase Q]
+    Logic -- "Phase Done" --> Distill[Distill Persona]
+    Distill --> Firestore[(Google Firestore)]
+    Probe --> Firestore
+    Next --> Firestore
+    Firestore --> UI
