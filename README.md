@@ -213,6 +213,6 @@ The introduction of the Hybrid Evaluation node and Persistence layer significant
 🎓 Masters in Applied Data Science (University of Florida)
 
 <p align="center" style="margin-top: 20px; font-size: 0.9em; color: #666;">
-    Built with ❤️ at the University of Florida.
+    🛠️ Built with ❤️ at the University of Florida
 </p>
 
