@@ -70,7 +70,7 @@ See SocraDesign in action! This video demonstrates a full session, highlighting 
 | :--- | :--- |
 | **YouTube Link** | **[https://www.youtube.com/watch?v=y3ngU1qYQv0&feature=youtu.be]** |
 
-### Scan to See the Demostration of the tool
+### Scan to see the demostration of the tool
 <div align="center">
   <img src="https://github.com/shaunnoeljose/AML-2-project/blob/main/docs/Demo%20QR.jpg" alt="QR Code to Live Demo" width="200"/>
 </div>
