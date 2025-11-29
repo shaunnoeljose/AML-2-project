@@ -208,9 +208,11 @@ The introduction of the Hybrid Evaluation node and Persistence layer significant
 
 ## Contact
 
-Shaun Noel Jose (Masters in Applied Data Science)
+👤 **Shaun Noel Jose** (shaun.jose@ufl.edu)
 
-Student at University of Florida
+🎓 Masters in Applied Data Science (University of Florida)
 
-Built with 🧡 at the University of Florida.
+<p align="center" style="margin-top: 20px; font-size: 0.9em; color: #666;">
+    Built with ❤️ at the University of Florida.
+</p>
 
