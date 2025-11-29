@@ -49,7 +49,11 @@ socra-design/
 │
 ├── 📁 docs/                        # Archeitcture and Interface Diagrams 
 │    ├── Socra UI.png               # Interface
-│    └── System Archeitecture.png   # Archeitecture
+│    ├── System Archeitecture.png   # Archeitecture
+│    ├── Stats_1.png                # Side banner after completion
+│    ├── Stats_2.png                # Debug and analytics panel after session completion
+│    ├── Final Response.png         # Final response including the session summary and roadmap
+│    └── Demo QR.png                # The Demo QR code
 │
 ├── 📁 results/                    # Archeitcture and Interface Diagrams 
 │    └── 📁 deep eval logs/        # Folder with deep eval logs
