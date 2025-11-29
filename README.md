@@ -160,7 +160,7 @@ Option A: Run the Application
 
 ```bash
 # Launch the Streamlit interface
-streamlit run app.py
+streamlit ui/run app.py
 ```
 
 Option B: Re-train the SLM (Optional)
@@ -168,10 +168,10 @@ If you want to retrain the local evaluation model on new data:
 
 ```bash
 # 1. Generate synthetic training data
-python hybrid_dataset.py --api-key "YOUR_KEY" --seed-out data/seed.csv --final-out data/train.csv
+python model/scripts/hybrid_dataset.py --api-key "YOUR_KEY" --seed-out data/seed.csv --final-out data/train.csv
 
 # 2. Train the scikit-learn pipeline
-python slm_train.py --data-path data/train.csv --out-dir models/slm_eval
+python model/scripts/slm_train.py --data-path data/train.csv --out-dir models/slm_eval
 ```
 ---
 
