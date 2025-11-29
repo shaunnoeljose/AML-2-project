@@ -69,9 +69,19 @@ See SocraDesign in action! This video demonstrates a full session, highlighting 
 | Video Access | Description |
 | :--- | :--- |
 | **YouTube Link** | **[https://www.youtube.com/watch?v=y3ngU1qYQv0&feature=youtu.be]** |
-| **Live Hugging Face Space URL** | [https://huggingface.co/spaces/Shaun121/Socradesign)] |
 
-<img src="https://github.com/shaunnoeljose/AML-2-project/blob/main/docs/Demo%20QR.jpg" alt="QR Code to Live Demo" width="200"/>
+### Scan to Access Live Demo Instantly
+<div align="center">
+  <img src="https://github.com/shaunnoeljose/AML-2-project/blob/main/docs/Demo%20QR.jpg" alt="QR Code to Live Demo" width="200"/>
+</div>
+
+### Deployment
+
+The final application is hosted on Hugging Face Spaces for immediate access.
+
+| Video Access | Description |
+| :--- | :--- |
+| **Live Hugging Face Space URL** | [https://huggingface.co/spaces/Shaun121/Socradesign)] |
 
 ---
 
