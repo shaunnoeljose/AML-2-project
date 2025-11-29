@@ -62,6 +62,17 @@ socra-design/
 ```
 ---
 
+## 📹 Demo & Walkthrough
+
+See SocraDesign in action! This video demonstrates a full session, highlighting the **Hybrid Evaluation** and **Phase Pill** progression.
+
+| Video Access | Description |
+| :--- | :--- |
+| **YouTube Link** | **[[PASTE YOUTUBE LINK HERE](https://www.youtube.com/watch?v=y3ngU1qYQv0&feature=youtu.be)]** |
+| **QR Code** | [Insert QR Code Image linking to the YouTube URL here] |
+
+---
+
 ## 🛠️ Setup & Installation
 
 ### 1. Prerequisites
